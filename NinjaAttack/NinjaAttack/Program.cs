@@ -10,7 +10,7 @@ namespace NinjaAttack
         /// </summary>
         static void Main(string[] args)
         {
-            using (Game1 game = new Game1())
+            using (NinjaAttack game = new NinjaAttack())
             {
                 game.Run();
             }

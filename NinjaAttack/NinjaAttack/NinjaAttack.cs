@@ -22,10 +22,15 @@ namespace NinjaAttack
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        NinjaGame mGame;
+
         public NinjaAttack()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            this.graphics.PreferredBackBufferHeight = 600;
+            this.graphics.PreferredBackBufferWidth = 800;
+            this.IsMouseVisible = true;
         }
 
         /// <summary>
@@ -36,7 +41,7 @@ namespace NinjaAttack
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+           
 
             base.Initialize();
         }
@@ -50,7 +55,7 @@ namespace NinjaAttack
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            mGame = new NinjaGame(this.Services);
         }
 
         /// <summary>
@@ -73,7 +78,7 @@ namespace NinjaAttack
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            
 
             base.Update(gameTime);
         }
@@ -84,9 +89,13 @@ namespace NinjaAttack
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+
+            this.mGame.Draw(spriteBatch, gameTime);
+
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

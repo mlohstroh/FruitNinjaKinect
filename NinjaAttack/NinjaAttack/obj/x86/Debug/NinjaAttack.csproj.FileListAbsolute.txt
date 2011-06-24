@@ -1,0 +1,8 @@
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\NinjaAttack.exe
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\NinjaAttack.pdb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\obj\x86\Debug\NinjaAttack.exe
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\obj\x86\Debug\NinjaAttack.pdb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\sword.xnb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\wood_paneling.xnb
