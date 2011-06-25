@@ -55,7 +55,7 @@ namespace NinjaAttack
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            mGame = new NinjaGame(this.Services);
+            mGame = new NinjaGame(this.Services, graphics.GraphicsDevice);
         }
 
         /// <summary>

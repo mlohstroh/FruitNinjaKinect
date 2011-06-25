@@ -10,7 +10,7 @@ namespace NinjaAttack
 {
     public class NinjaPlayer
     {
-        private Vector2 oldHandVector = new Vector();
+        private Vector2 oldHandVector = new Vector2();
 
         private NinjaGame mGame;
 
@@ -28,10 +28,20 @@ namespace NinjaAttack
             handTexture = mGame.Content.Load<Texture2D>("sword");
         }
 
-        public void UpdateHand(Vector hand)
+        public void UpdateHand(Vector2 hand)
         {
+            realHandPosition = hand;
+            Console.WriteLine(realHandPosition.ToString());
             //convert to XNA vector for ease
-            Vector2 convertedHand = new Vector2(hand.X, hand.Y);
+            //Vector2 convertedHand = new Vector2(hand.X, hand.Y);
+
+            
+            //    realHandPosition += ((oldHandVector - convertedHand) * 200);
+            //    Console.WriteLine(realHandPosition.ToString());
+
+            //    //switch them out
+            //    oldHandVector = convertedHand;
+            
         }
 
         public void Draw(SpriteBatch sprite)
