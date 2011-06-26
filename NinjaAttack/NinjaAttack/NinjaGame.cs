@@ -24,12 +24,24 @@ namespace NinjaAttack
         private Texture2D kinectRGBVideo;
         private GraphicsDevice mDevice;
 
+        //easy to change
+        public Vector2 gravity = new Vector2(0, -175.0f);
+
+        
+
+        private List<GameObject> mObjects = new List<GameObject>();
+
+        private List<FruitData> fruitToAddNextUpdate = new List<FruitData>();
+
         public NinjaGame(IServiceProvider services, GraphicsDevice device)
         {
             mContent = new ContentManager(services, "Content");
             mDevice = device;
             LoadContent();
+            fruitToAddNextUpdate.Add(new FruitData(new Vector2(200, 600), new Vector2(2 , -400)));
         }
+
+
 
         public ContentManager Content
         {
@@ -110,13 +122,37 @@ namespace NinjaAttack
                 sprite.Draw(kinectRGBVideo, new Rectangle(0, 0, 160, 120), Color.White);
             }
             //then draw needed objects
+
+            foreach (GameObject obj in mObjects)
+            {
+                if (obj.GetType() == typeof(Fruit))
+                {
+                    Fruit fruit = (Fruit)obj;
+                    fruit.Draw(sprite ,time);
+                }
+            }
+
             player.Draw(sprite);
             
         }
 
         public void Update(GameTime time)
         {
-
+            
+            foreach (FruitData data in this.fruitToAddNextUpdate)
+            {
+                this.mObjects.Add(new Fruit(this, data.Position, data.Velocity, time.TotalGameTime.Milliseconds));
+            }
+            //then clear
+            fruitToAddNextUpdate.Clear();
+            foreach (GameObject obj in mObjects)
+            {
+                if (obj.GetType() == typeof(Fruit))
+                {
+                    Fruit fruit = (Fruit)obj;
+                    fruit.Update(time);
+                }
+            }
         }
     }
 }

@@ -78,7 +78,7 @@ namespace NinjaAttack
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            
+            mGame.Update(gameTime);
 
             base.Update(gameTime);
         }

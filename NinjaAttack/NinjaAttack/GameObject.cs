@@ -24,5 +24,29 @@ namespace NinjaAttack
             get { return mPosition; }
             set { mPosition = value; }
         }
+
+        private Vector2 mVelocity;
+
+        public Vector2 Velocity
+        {
+            get { return mVelocity; }
+            set { mVelocity = value; }
+        }
+
+        private NinjaGame mGame;
+
+        public NinjaGame Game
+        {
+            get { return mGame; }
+            set { mGame = value; }
+        }
+
+        private bool mIsAlive;
+
+        public bool IsAlive
+        {
+            get { return mIsAlive; }
+            set { mIsAlive = value; }
+        }
     }
 }

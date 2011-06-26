@@ -19,6 +19,15 @@
       <Output>C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\wood_paneling.xnb</Output>
       <Time>2011-06-24T18:45:34.96875-05:00</Time>
     </Item>
+    <Item>
+      <Source>apple.png</Source>
+      <Name>apple</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\apple.xnb</Output>
+      <Time>2011-06-24T21:25:13.7294921-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
