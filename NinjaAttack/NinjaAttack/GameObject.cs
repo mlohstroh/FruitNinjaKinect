@@ -48,5 +48,10 @@ namespace NinjaAttack
             get { return mIsAlive; }
             set { mIsAlive = value; }
         }
+
+        public Rectangle BoundingRectangle
+        {
+            get { return new Rectangle((int)mPosition.X - 25, (int)mPosition.Y - 25, mTexture.Width, mTexture.Height); }
+        }
     }
 }

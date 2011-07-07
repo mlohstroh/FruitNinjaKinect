@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Research.Kinect.Nui;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -10,12 +9,13 @@ namespace NinjaAttack
 {
     public class NinjaPlayer
     {
-        private Vector2 oldHandVector = new Vector2();
-
         private NinjaGame mGame;
 
         private Vector2 realHandPosition = new Vector2(400, 300);
         private Texture2D handTexture;
+        private Texture2D block;
+
+        private float handSensitivity = 1.5f;
 
         public NinjaPlayer(NinjaGame game)
         {
@@ -26,22 +26,31 @@ namespace NinjaAttack
         private void LoadContent()
         {
             handTexture = mGame.Content.Load<Texture2D>("sword");
+            block = mGame.Content.Load<Texture2D>("black");
+        }
+
+        public float Sensitivity
+        {
+            get { return handSensitivity; }
+            set { handSensitivity = value; }
+        }
+
+        public Rectangle Hand
+        {
+            get { return new Rectangle((int)realHandPosition.X - 50, (int)realHandPosition.Y - 50, handTexture.Width, handTexture.Height); }
         }
 
         public void UpdateHand(Vector2 hand)
         {
-            realHandPosition = hand;
-            Console.WriteLine(realHandPosition.ToString());
-            //convert to XNA vector for ease
-            //Vector2 convertedHand = new Vector2(hand.X, hand.Y);
 
-            
-            //    realHandPosition += ((oldHandVector - convertedHand) * 200);
-            //    Console.WriteLine(realHandPosition.ToString());
-
-            //    //switch them out
-            //    oldHandVector = convertedHand;
-            
+            //first, check to see if the ninja's hand is in the correct spot
+            if (hand.X >= 200 && hand.X <= 600 && hand.Y <= 300)
+            {
+                //the y is easy, just multiply the current hand by y
+                realHandPosition.Y = hand.Y * 2;
+                //then, since the x is offset by 200, you have to subtract that much and multiply by 2
+                realHandPosition.X = (hand.X - 200) * 2;
+            }
         }
 
         public void Draw(SpriteBatch sprite)

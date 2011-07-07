@@ -7,3 +7,6 @@ C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\sword.xnb
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\wood_paneling.xnb
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\apple.xnb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\appledice.xnb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\black.xnb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\font.xnb

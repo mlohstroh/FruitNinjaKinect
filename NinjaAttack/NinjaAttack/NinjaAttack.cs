@@ -55,7 +55,7 @@ namespace NinjaAttack
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            mGame = new NinjaGame(this.Services, graphics.GraphicsDevice);
+            mGame = new NinjaGame(this.Services, graphics.GraphicsDevice, this);
         }
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace NinjaAttack
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+           
         }
 
         /// <summary>
@@ -81,6 +81,12 @@ namespace NinjaAttack
             mGame.Update(gameTime);
 
             base.Update(gameTime);
+        }
+
+        protected override void EndRun()
+        {
+            mGame.StopKinect();
+            base.EndRun();
         }
 
         /// <summary>

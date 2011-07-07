@@ -1,3 +1,6 @@
 Content\sword.xnb
 Content\wood_paneling.xnb
 Content\apple.xnb
+Content\appledice.xnb
+Content\black.xnb
+Content\font.xnb
