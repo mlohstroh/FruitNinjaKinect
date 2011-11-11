@@ -4,3 +4,6 @@ Content\apple.xnb
 Content\appledice.xnb
 Content\black.xnb
 Content\font.xnb
+Content\FruitNinja.xgs
+Content\effects.xwb
+Content\effects.xsb

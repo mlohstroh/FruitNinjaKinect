@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Sections>
+  <WaveBank Name="effects">Wave Bank
+{
+    Name = effects;
+    Xbox File = Xbox\effects.xwb;
+    Windows File = Win\effects.xwb;
+    Xbox Bank Path Edited = 0;
+    Windows Bank Path Edited = 0;
+    Seek Tables = 1;
+    Compression Preset Name = &lt;none&gt;;
+    Bank Last Revised Low = 4015919637;
+    Bank Last Revised High = 30162175;
+
+    Wave
+    {
+        Name = throwapple1;
+        File = C:\Users\Mark\Documents\XNA Sounds\FruitNinja\throwapple1.wav;
+        Build Settings Last Modified Low = 1471720418;
+        Build Settings Last Modified High = 30162175;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 10950;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1324424585;
+            Last Modified High = 30162169;
+        }
+    }
+
+    Wave
+    {
+        Name = throwapple2;
+        File = C:\Users\Mark\Documents\XNA Sounds\FruitNinja\throwapple2.wav;
+        Build Settings Last Modified Low = 1622628621;
+        Build Settings Last Modified High = 30162175;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 28672;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 0;
+            Last Modified High = 0;
+        }
+    }
+
+    Wave
+    {
+        Name = throwapple3;
+        File = C:\Users\Mark\Documents\XNA Sounds\FruitNinja\throwapple3.wav;
+        Build Settings Last Modified Low = 1622628621;
+        Build Settings Last Modified High = 30162175;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 1;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 23552;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 0;
+            Last Modified High = 0;
+        }
+    }
+}
+
+</WaveBank>
+</Sections>

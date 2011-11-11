@@ -56,6 +56,10 @@ namespace NinjaAttack
         private List<Fruit> fruitToRemoveNextUpdate = new List<Fruit>();
         private NinjaAttack startInstance;
 
+        //sound
+        private SoundPlayer sound;
+        private int neededTime = 1000;
+
         public NinjaGame(IServiceProvider services, GraphicsDevice device, NinjaAttack starter)
         {
             mContent = new ContentManager(services, "Content");
@@ -94,10 +98,12 @@ namespace NinjaAttack
             audioChoices = new Choices();
             audioChoices.Add("stop");
             audioChoices.Add("start");
-            audioChoices.Add("kinect close");
-            audioChoices.Add("increase sensitivity");
-            audioChoices.Add("decrease sensitivity");
+            audioChoices.Add("kinect shutdown");
+            audioChoices.Add("reset time");
+            audioChoices.Add("spree");
             audioChoices.Add("reset hand");
+            audioChoices.Add("faster");
+            audioChoices.Add("slower");
             grammerBuilder = new GrammarBuilder();
             grammerBuilder.Culture = ri.Culture;
             grammerBuilder.Append(audioChoices);
@@ -115,12 +121,14 @@ namespace NinjaAttack
             backGround = Content.Load<Texture2D>("wood_paneling");
             font = Content.Load<SpriteFont>("font");
 
+            sound = new SoundPlayer();
         }
 
         public void StopKinect()
         {            
             sre.RecognizeAsyncStop();
             kinectDevice.Uninitialize();
+            sound.Shutdown();
         }
 
         void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -134,8 +142,20 @@ namespace NinjaAttack
                 case "stop":
                     this.canThrowMoreFruit = false;
                     break;
-                case "kinect close":
+                case "kinect shutdown":
                     //this.startInstance.Exit();
+                    break;
+                case "faster":
+                    neededTime -= 100;
+                    break;
+                case "slower":
+                    neededTime += 100;
+                    break;
+                case "reset time":
+                    neededTime = 1000;
+                    break;
+                case "spree":
+                    neededTime = 1;
                     break;
            }
         }
@@ -217,7 +237,7 @@ namespace NinjaAttack
             elapsedMili += time.ElapsedGameTime.Milliseconds;
 
             //throw a fruit a second
-            if (elapsedMili >= 100 && canThrowMoreFruit)
+            if (elapsedMili >= neededTime && canThrowMoreFruit)
             {
                 AddFruit();
                 //then reset time
@@ -231,6 +251,8 @@ namespace NinjaAttack
             foreach (FruitData data in this.fruitToAddNextUpdate)
             {
                 this.mObjects.Add(new Fruit(this, data.Position, data.Velocity, time.TotalGameTime.Milliseconds));
+                Random r = new Random(DateTime.Now.Millisecond);
+                sound.PlaySound("throwapple" + r.Next(1, 3).ToString());
             }
             //then clear
             fruitToAddNextUpdate.Clear();
@@ -251,7 +273,6 @@ namespace NinjaAttack
                         fruitToRemoveNextUpdate.Add(fruit);
                     }
                 }
-                
             }
         }
 

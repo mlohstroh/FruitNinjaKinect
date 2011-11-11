@@ -1,0 +1,3 @@
+Content\FruitNinja.xgs
+Content\effects.xwb
+Content\effects.xsb

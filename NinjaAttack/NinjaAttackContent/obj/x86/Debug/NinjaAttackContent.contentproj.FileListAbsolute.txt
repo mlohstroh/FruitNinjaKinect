@@ -1,1 +1,2 @@
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttackContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttackContent\obj\x86\Debug\FruitNinja.xml

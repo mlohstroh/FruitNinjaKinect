@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaAttack", "NinjaAttack\NinjaAttack\NinjaAttack.csproj", "{3ECE5107-B33D-40F0-9B69-B4B3D5B2ED75}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "NinjaAttackContent", "NinjaAttack\NinjaAttackContent\NinjaAttackContent.contentproj", "{8ADE1042-75D0-408C-BBA1-E795D94DAAAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjaAttackContent", "NinjaAttack\NinjaAttackContent\NinjaAttackContent.contentproj", "{8ADE1042-75D0-408C-BBA1-E795D94DAAAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,3 +10,6 @@ C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\appledice.xnb
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\black.xnb
 C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\font.xnb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\FruitNinja.xgs
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\effects.xwb
+C:\Users\Mark\Documents\Visual Studio 2010\Projects\FruitNinjaKinect\NinjaAttack\NinjaAttack\bin\x86\Debug\Content\effects.xsb
